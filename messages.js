@@ -10,4 +10,13 @@ const thirdMessage = ['Learn new skills.', 'Manage your stress.', 'Eat plenty of
 let randomNum = array => {
     return Math.floor(Math.random() * array.length);
 };
+// console.log(randomNum(firstMessage));
+
+// Set up a function to get a message from an array using the previously set up random function
+let randomString = array => {
+    for (let i = 0; i < array.length; i++) {
+        return array[randomNum(array)];
+    }
+}
+console.log(randomString(firstMessage));
 

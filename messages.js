@@ -17,6 +17,23 @@ let randomString = array => {
     for (let i = 0; i < array.length; i++) {
         return array[randomNum(array)];
     }
-}
-console.log(randomString(firstMessage));
+};
+// console.log(randomString(firstMessage));
 
+// Set up a function to run randomString for each of the 3 arrays, assigning the result to a variable
+let lifeTips = () => {
+    let msg1 = (array1) => {
+        return randomString(array1);
+    }
+    console.log(msg1(firstMessage));
+    let msg2 = (array2) => {
+        return randomString(array2);
+    }
+    console.log(msg2(secondMessage));
+    let msg3 = (array3) => {
+        return randomString(array3);
+    }
+    console.log('and ' + msg3(thirdMessage));
+}
+
+lifeTips();
